@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Modules\Utilisateur\Database\Factories\UtilisateurFactory;
+use Spatie\Permission\Traits\HasRoles;
 
 class Utilisateur extends Authenticatable
 {
+    use HasRoles;
     use HasFactory, Notifiable;
 
     /**
